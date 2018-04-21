@@ -41,4 +41,9 @@ public final class JvmGC extends AbstractJvmGC implements GCBenchMark {
         execute(memoryAllocTask, threadNum, numberOfAllocs);
     }
 
+    public static void main(String[] args) {
+        GCBenchMark gcBenchMark = new JvmGC(100000);
+        gcBenchMark.startOnMultipleCoresAndFixedSize(1024 * 1024 * 10, 50);
+
+    }
 }

@@ -17,7 +17,7 @@ public abstract class AbstractJvmGC {
      * @param numberOfAllocs
      */
     public void execute(MemoryAllocTask memoryAllocTask, int threadNum, int numberOfAllocs) {
-        ExecutorService executorService = Executors.newFixedThreadPool(200);
+        ExecutorService executorService = Executors.newFixedThreadPool(threadNum);
 
         for (int i = 0; i < numberOfAllocs; i++) {
             executorService.execute(memoryAllocTask);

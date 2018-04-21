@@ -1,7 +1,5 @@
 package com.ssssssnake.jvm.gc.benchmark.memory;
 
-import com.sun.tools.javac.util.Assert;
-
 import java.util.Random;
 
 /**
