@@ -42,7 +42,7 @@ public final class JvmGC extends AbstractJvmGC implements GCBenchMark {
     }
 
     public static void main(String[] args) {
-        GCBenchMark gcBenchMark = new JvmGC(100000);
+        GCBenchMark gcBenchMark = new JvmGC(50000);
         gcBenchMark.startOnMultipleCoresAndFixedSize(1024 * 1024 * 10, 50);
 
     }
