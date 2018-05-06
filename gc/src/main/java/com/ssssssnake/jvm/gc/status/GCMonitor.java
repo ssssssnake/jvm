@@ -44,15 +44,15 @@ public class GCMonitor {
     }
 
     public static void main(String[] args) throws InterruptedException {
-//        if (args == null || args.length == 0) {
-////            System.err.println("Please specify the target PID to attach.");
-////            return;
-////        }
+        if (args == null || args.length == 0) {
+            System.err.println("Please specify the target PID to attach.");
+            return;
+        }
 
         // attach to the target application
         VirtualMachine vm;
         try {
-            vm = VirtualMachine.attach("16604");
+            vm = VirtualMachine.attach(args[0]);
         } catch (AttachNotSupportedException e) {
             System.err.println("Target application doesn't support attach API.");
             e.printStackTrace();
